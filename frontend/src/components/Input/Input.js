@@ -13,7 +13,7 @@ function Input(){
   const [et, setEt] = useState("");
 
   axios
-    .post('http://localhost:5000/api/experiment/getEt', {id: id})
+    .post('/api/experiment/getEt', {id: id})
     .then(res => {
       setEt(res.data.experiment_type)
     })
@@ -28,7 +28,7 @@ function Input(){
 
   function proceed(){
     axios
-      .post('http://localhost:5000/api/experiment/updateWords', {id: id, words: words})
+      .post('/api/experiment/updateWords', {id: id, words: words})
       .then(res => {
         setWords("");
         console.log(res);

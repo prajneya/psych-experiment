@@ -11,7 +11,7 @@ function Final(){
   const [et, setEt] = useState("");
 
   axios
-    .post('http://localhost:5000/api/experiment/getEt', {id: id})
+    .post('/api/experiment/getEt', {id: id})
     .then(res => {
       setEt(res.data.experiment_type)
     })
@@ -23,7 +23,7 @@ function Final(){
     var chosen_game = "";
 
     var ele = document.getElementsByName('game');
-              
+
     for(var i = 0; i < ele.length; i++) {
         if(ele[i].checked){
           chosen_game = ele[i].value;
@@ -33,7 +33,7 @@ function Final(){
 
     if(chosen_game!=""){
       axios
-        .post('http://localhost:5000/api/experiment/updateGame', {id: id, game_chosen: chosen_game})
+        .post('/api/experiment/updateGame', {id: id, game_chosen: chosen_game})
         .then(res => {
           console.log(res);
           window.location.href = '/thanks/';
@@ -44,7 +44,7 @@ function Final(){
       window.location.href = '/thanks/';
     }
 
-    
+
   }
 
   return (

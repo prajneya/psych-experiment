@@ -11,7 +11,7 @@ function Video(){
   const [et, setEt] = useState("");
 
   axios
-    .post('http://localhost:5000/api/experiment/getEt', {id: id})
+    .post('/api/experiment/getEt', {id: id})
     .then(res => {
       setEt(res.data.experiment_type)
     })

@@ -27,7 +27,7 @@ class Home extends Component {
     };
 
     axios
-      .post('http://localhost:5000/api/experiment', data)
+      .post('/api/experiment', data)
       .then(res => {
         this.setState({
           name: '',
