@@ -85,7 +85,7 @@ class Home extends Component {
           <div className='form-group'>
             <p>Gender</p>
              <div onChange={this.onChange}>
-              <input type="radio" value="MALE" name="gender" required/> Male
+              <input type="radio" value="MALE" name="gender" required/> Male  &nbsp; &nbsp;
               <input type="radio" value="FEMALE" name="gender"/> Female
             </div>
           </div>
