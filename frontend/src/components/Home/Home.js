@@ -54,11 +54,11 @@ class Home extends Component {
     return (
       <div className="container text-center p-5">
         <h1>WELCOME TO THE EXPERIMENT</h1>
-        <p> Thank you for being part of this experiment. The experiment is a part of a project being done by IIIT-H students to study the effects of word memorability. The experiment will take around 5 minutes to complete. We appreciate your patience and time taken to be part of this experiment.</p>
+        <p> Thank you for being part of this experiment. The experiment is a part of a project being done to study the effects of word memorability. The experiment will take around 5 minutes to complete. We appreciate your patience and time taken to be part of this experiment.</p>
         <br/>
         <p>Please follow the instructions on the screen and complete the said tasks. Fill the form below once you are ready. </p>
 
-        <form noValidate onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit}>
           <div className='form-group'>
             <input
               type='text'
@@ -72,24 +72,22 @@ class Home extends Component {
           <br />
           <div className='form-group'>
             <input
-              type='text'
+              type='number'
               placeholder='Your Age'
               name='age'
               className='form-control'
               value={this.state.age}
               onChange={this.onChange}
+              required 
             />
           </div>
           <br />
           <div className='form-group'>
-            <input
-              type='text'
-              placeholder='Your Gender'
-              name='gender'
-              className='form-control'
-              value={this.state.gender}
-              onChange={this.onChange}
-            />
+            <p>Gender</p>
+             <div onChange={this.onChange}>
+              <input type="radio" value="MALE" name="gender" required/> Male
+              <input type="radio" value="FEMALE" name="gender"/> Female
+            </div>
           </div>
           <br />
           <div className='form-group'>
