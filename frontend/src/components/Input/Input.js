@@ -43,12 +43,12 @@ function Input(){
   return (
     <div className="container text-center p-5">
       <h1>{et == 2 || et == 3 ? "STEP 2/3" : "STEP 3/4" }: RECALL WORDS</h1>
-      <p> Thank you for being part of this experiment. The experiment is a part of a project being done by IIIT-H students to study the effects of word memorability. The experiment will take around 5 minutes to complete. We appreciate your patience and time taken to be part of this experiment.</p>
+      <p> Thank you for being part of this experiment. The experiment is a part of a project being done to study the effects of word memorability. The experiment will take around 5 minutes to complete. We appreciate your patience and time taken to be part of this experiment.</p>
       <br/>
       <p>Try to recall as many words as you can and enter them in the box below (space separated). Press the PROCEED Button once you are done.</p>
 
       <div className="m-5">
-        <textarea className="input-area" value={words} onChange={onChange}/>
+        <textarea className="input-area" value={words} onChange={onChange} required/>
       </div>
 
       <button className="btn btn-success" onClick={proceed}> PROCEED </button>
