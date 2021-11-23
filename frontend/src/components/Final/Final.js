@@ -58,7 +58,7 @@ function Final(){
         <div className="row">
           <div className="col-lg-6">
             <img src="/Bling.jpeg" width="100%"/>
-            <input type="radio" id="bling" name="game" value="BLING"/> BLING
+            <input type="radio" id="bling" name="game" value="BLING" required/> BLING
           </div>
           <div className="col-lg-6">
             <img src="/Tingo.jpeg" width="100%"/>
