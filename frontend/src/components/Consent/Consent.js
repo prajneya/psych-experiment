@@ -1,49 +1,14 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 class Consent extends Component {
   constructor() {
     super();
-    this.state = {
-      name: '',
-      gender: '',
-      age: '',
-      occupation: '',
-    };
   }
-
-  onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
 
   onSubmit = e => {
     e.preventDefault();
-
-    const data = {
-      name: this.state.name,
-      gender: this.state.age,
-      age: this.state.gender,
-      occupation: this.state.occupation,
-    };
-
-    axios
-      .post('/api/experiment', data)
-      .then(res => {
-        this.setState({
-          name: '',
-          age:'',
-          gender:'',
-          occupation:'',
-        })
-        console.log(res);
-        window.location.href = '/home';
-        })
-        .catch(err => {
-          console.log("Error in Creating Experiment!", err);
-        })
+    window.location.href = '/home';
   };
-
-
 
   render() {
     return (
@@ -68,7 +33,7 @@ After taking into account the requirements of this study, if you are ready to co
 
 If you have any further questions, please contact us at the provided email address. Principal Investigator: prisanka sivttin
 
-I have read the aforementioned information carefully. Any questions pertaining to this experiment have been answered to my best satisfaction. I hereby voluntarily agree to participate in this project. To proceed, kindly click on "GO AHEADIT</p>
+I have read the aforementioned information carefully. Any questions pertaining to this experiment have been answered to my best satisfaction. I hereby voluntarily agree to participate in this project. To proceed, kindly click on "PROCEED"</p>
         <br/>
 
         <form onSubmit={this.onSubmit}>

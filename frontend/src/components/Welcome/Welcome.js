@@ -5,43 +5,11 @@ import { Button, Navbar, Container, Row, Card, ListGroup, Form  } from 'react-bo
 class Welcome extends Component {
   constructor() {
     super();
-    this.state = {
-      name: '',
-      gender: '',
-      age: '',
-      occupation: '',
-    };
   }
-
-  onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
 
   onSubmit = e => {
     e.preventDefault();
-
-    const data = {
-      name: this.state.name,
-      gender: this.state.age,
-      age: this.state.gender,
-      occupation: this.state.occupation,
-    };
-
-    axios
-      .post('/api/experiment', data)
-      .then(res => {
-        this.setState({
-          name: '',
-          age:'',
-          gender:'',
-          occupation:'',
-        })
-        console.log(res);
-        window.location.href = '/consent';
-        })
-        .catch(err => {
-          console.log("Error in Creating Experiment!", err);
-        })
+    window.location.href = '/consent';
   };
 
 
@@ -75,15 +43,15 @@ class Welcome extends Component {
             </Row>
             <Row>
             <Card>
-                <Card.Body>Focus detail – Elaborate the objective of the study. Keep 
-            in mind that if the elaboration will effect your 
-            investigation, then in that case conceal the main 
-            purpose of the study. Inform them about the broad 
-            focus at the end of the experiment, during debriefing. 
-            7. Nature of the study – let say if you have four tasks in 
-            your experiment, inform your participants in advance 
-            that they will be asked to perform four tasks. Each task 
-            will be different in nature and will require different time 
+                <Card.Body>Focus detail – Elaborate the objective of the study. Keep
+            in mind that if the elaboration will effect your
+            investigation, then in that case conceal the main
+            purpose of the study. Inform them about the broad
+            focus at the end of the experiment, during debriefing.
+            7. Nature of the study – let say if you have four tasks in
+            your experiment, inform your participants in advance
+            that they will be asked to perform four tasks. Each task
+            will be different in nature and will require different time
             to complete the task.</Card.Body>
                 </Card>
             </Row>
