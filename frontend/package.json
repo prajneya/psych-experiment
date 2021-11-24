@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "node server/index.js",
+    "fstart": "react-scripts start",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
