@@ -31,7 +31,7 @@ function Game() {
       <iframe
         title="game"
         className="gameArea"
-        src="https://slither.io/"
+        src="https://snake.io/"
         frameBorder="0"
         scrolling="no"
       ></iframe>
