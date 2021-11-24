@@ -1,0 +1,4 @@
+{
+  "mongoURI":
+    "mongodb+srv://psychUser:wVqkOWJG3Y1nzqcN@cluster0.knpwy.mongodb.net/psych?retryWrites=true&w=majority"
+}

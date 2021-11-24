@@ -1,0 +1,14 @@
+.gameArea{
+	height: 60vh;
+	width: 100%;
+}
+
+.videoPlayer{
+	left: 50%;
+    position: relative;
+    margin-left: -300px;
+}
+
+.input-area{
+	width: 100%;
+}
